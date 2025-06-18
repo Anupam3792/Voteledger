@@ -64,12 +64,13 @@
     <div class="container" >
         <div class="hero-box">
             <div class="hero-title mb-2">Welcome to VoteLedger</div>
-            <div class="hero-subtitle mb-3">Create and participate in decentralized voting using blockchain technology.</div>
+            <div class="hero-subtitle mb-3">Initiate and engage in secure, decentralized voting powered by blockchain technology.
+                .</div>
             <a href="voting.html" class="btn btn-warning btn-create-voting">Create New Voting</a>
         </div>
     </div>
 
-    <div class="container ongoing-voting-section mt-4">
+    <div class="container ongoing-voting-section mt-4" style="margin-bottom: 3.5rem;">
         <h2 class="ongoing-voting-title text-center">Ongoing Voting Sessions</h2>
         <div id="ongoingVotingContent" class="row justify-content-center">
             <div class="spinner-border text-primary" role="status">
@@ -169,7 +170,7 @@
                                 <h5 class='card-title text-warning'>Session: ${session.id}</h5>
                                 <p class='card-text mb-2'><strong>Start:</strong> <span class='text-info'>${startDate.toLocaleString()}</span></p>
                                 <p class='card-text mb-2'><strong>Ends:</strong> <span class='text-info'>${endDate.toLocaleString()}</span></p>
-                                <a href="voting-result.html?session=${encodeURIComponent(session.id)}" class='btn btn-${isOngoing ? "primary" : "secondary"} w-100'>${isOngoing ? "Vote Now" : "View Result"}</a>
+                                <a href="${isOngoing ? `vote.html?session=${encodeURIComponent(session.id)}` : `result.html?session=${encodeURIComponent(session.id)}`}" class='btn btn-${isOngoing ? "primary" : "secondary"} w-100'>${isOngoing ? "Vote Now" : "View Result"}</a>
                             </div>
                         </div>
                     `;

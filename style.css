@@ -1,0 +1,289 @@
+/* Global Styles */
+:root {
+    --primary-color: #4A90E2;
+    --secondary-color: #2C3E50;
+    --success-color: #27AE60;
+    --background-color: #F8F9FA;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--secondary-color);
+}
+
+/* Hero Section */
+.hero-section {
+    padding-top: 120px;
+    padding-bottom: 80px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* Feature Cards */
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: #357ABD;
+    border-color: #357ABD;
+}
+
+.btn-success {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+/* Form Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(74, 144, 226, 0.25);
+}
+
+/* Navbar */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-section {
+        padding-top: 100px;
+        text-align: center;
+    }
+    
+    .feature-card {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Ongoing Voting Section */
+.ongoing-voting-section {
+    background: #181818;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    max-width: 80vw;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 56px !important;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.ongoing-voting-title {
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+.ongoing-voting-table th, .ongoing-voting-table td {
+    color: #fff;
+    background: #222;
+    border: none;
+}
+.ongoing-voting-table th {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.card.bg-dark {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.card.bg-dark:hover {
+    box-shadow: 0 8px 32px rgba(74,144,226,0.18);
+    transform: translateY(-6px) scale(1.025);
+}
+
+.hero-box {
+    background: #222;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    margin: 2rem auto 2.5rem auto;
+    max-width: 800px;
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.hero-box:hover {
+    box-shadow: 0 8px 32px rgba(74,144,226,0.15);
+    transform: translateY(-4px) scale(1.02);
+}
+.hero-title {
+    font-family: 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+.hero-subtitle {
+    color: #bbb;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+.btn-create-voting {
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.7rem 2.2rem;
+    transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn-create-voting:hover, .btn-create-voting:focus {
+    background: var(--primary-color);
+    color: #fff;
+    transform: scale(1.07);
+    box-shadow: 0 4px 16px rgba(74,144,226,0.18);
+}
+.btn.btn-primary, .btn.btn-secondary {
+    transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn.btn-primary:hover, .btn.btn-secondary:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 16px rgba(74,144,226,0.18);
+    filter: brightness(1.1);
+}
+.navbar .btn-connect-wallet {
+    margin-left: 1rem;
+}
+
+.voting-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+}
+.voting-card {
+    flex: 0 1 calc(33.333% - 2rem);
+    max-width: 350px;
+    min-width: 260px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 1200px) {
+    .voting-card {
+        flex: 0 1 calc(50% - 2rem);
+    }
+}
+@media (max-width: 900px) {
+    .hero-box, .ongoing-voting-section, .card.bg-dark {
+        max-width: 98vw;
+        width: 98vw;
+    }
+    .voting-cards-row {
+        gap: 1rem;
+    }
+    .voting-card {
+        flex: 0 1 calc(100% - 1rem);
+        max-width: 98vw;
+        min-width: 180px;
+    }
+}
+
+.navbar-separator {
+    width: 100vw;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, #fff 100%);
+    box-shadow: 0 2px 8px rgba(74,144,226,0.10);
+    margin-bottom: 0.5rem;
+    border-radius: 0 0 8px 8px;
+}
+.footer-separator {
+    width: 100vw;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, #fff 100%);
+    box-shadow: 0 2px 8px rgba(74,144,226,0.10);
+    margin-bottom: 2rem;
+    margin-top: -1.5rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.btn-home.tailwind-home-btn {
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    z-index: 1050;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(74,144,226,0.18);
+    transition: transform 0.18s, filter 0.18s, box-shadow 0.18s;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn-home.tailwind-home-btn:hover, .btn-home.tailwind-home-btn:focus {
+    transform: scale(1.08) translateY(-2px);
+    filter: brightness(1.15);
+    box-shadow: 0 6px 24px rgba(74,144,226,0.22);
+    color: #fff;
+    text-decoration: none;
+}
+@media (max-width: 600px) {
+    .btn-home.tailwind-home-btn {
+        top: 8px;
+        left: 8px;
+        padding: 0.4rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+.home-btn-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.home-btn-gap {
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+} 

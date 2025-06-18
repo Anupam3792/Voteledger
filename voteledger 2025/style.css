@@ -136,7 +136,7 @@ body {
 }
 
 .card.bg-dark:hover {
-    box-shadow: 0 8px 32px rgba(74,144,226,0.18);
+    box-shadow: 0 8px 32px rgba(11, 122, 248, 0.18);
     transform: translateY(-6px) scale(1.025);
 }
 
@@ -192,22 +192,23 @@ body {
 .voting-cards-row {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: flex-start;
     align-items: stretch;
     width: 100%;
+    margin-bottom: 0.5rem;
 }
 .voting-card {
-    flex: 0 1 calc(33.333% - 2rem);
-    max-width: 350px;
-    min-width: 260px;
-    margin-bottom: 2rem;
+    flex: 0 1 calc(33.333% - 3rem);
+    max-width: 50px;
+    min-width: 2px;
+    margin: 0;
     display: flex;
     flex-direction: column;
 }
 @media (max-width: 1200px) {
     .voting-card {
-        flex: 0 1 calc(50% - 2rem);
+        flex: 0 1 calc(50% - 3rem);
     }
 }
 @media (max-width: 900px) {
@@ -216,12 +217,30 @@ body {
         width: 98vw;
     }
     .voting-cards-row {
+        gap: 1.5rem;
+    }
+    .voting-card {
+        flex: 0 1 calc(100% - 1.5rem);
+        max-width: 98vw;
+        min-width: 180px;
+    }
+}
+@media (max-width: 600px) {
+    .hero-box {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        font-size: 1.1rem;
+    }
+    .hero-title {
+        font-size: 1.3rem;
+    }
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    .voting-cards-row {
         gap: 1rem;
     }
     .voting-card {
-        flex: 0 1 calc(100% - 1rem);
-        max-width: 98vw;
-        min-width: 180px;
+        margin-bottom: 0;
     }
 }
 
@@ -286,4 +305,232 @@ body {
 .home-btn-gap {
     margin-top: 2.5rem;
     margin-bottom: 2rem;
+}
+
+/* --- Modern Result Page Hero Section --- */
+.result-hero-box {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(74,144,226,0.10);
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    margin: 2rem auto 2.5rem auto;
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.result-hero-title {
+    font-family: 'Segoe UI', 'Fira Mono', 'Consolas', 'Courier New', monospace;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+.result-hero-subtitle {
+    color: #555;
+    font-size: 1.15rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.result-hero-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    background: linear-gradient(135deg, #4A90E2 60%, #357ABD 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(74,144,226,0.18);
+    color: #fff;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    border: 3px solid #e9ecef;
+    transition: box-shadow 0.3s, transform 0.3s;
+    animation: tickPopIn 0.9s cubic-bezier(.68,-0.55,.27,1.55) 0.2s both;
+}
+.result-hero-icon i {
+    color: #fff;
+    font-size: 1.3rem;
+}
+@keyframes tickPopIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.2) rotate(-90deg);
+        filter: blur(2px);
+    }
+    60% {
+        opacity: 1;
+        transform: scale(1.15) rotate(10deg);
+        filter: blur(0);
+    }
+    80% {
+        transform: scale(0.95) rotate(-5deg);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+        filter: blur(0);
+    }
+}
+.result-hero-box:hover {
+    box-shadow: 0 8px 32px rgba(74,144,226,0.18);
+    transform: translateY(-4px) scale(1.02);
+}
+
+/* --- Animation Classes --- */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeInAnim 1.1s cubic-bezier(.68,-0.55,.27,1.55) 0.1s forwards;
+}
+@keyframes fadeInAnim {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up {
+    opacity: 0;
+    animation: slideUpAnim 1.1s cubic-bezier(.68,-0.55,.27,1.55) 0.2s forwards;
+}
+@keyframes slideUpAnim {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Card Spacing and Layout --- */
+.card.bg-dark {
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(74,144,226,0.10);
+    margin-bottom: 2.5rem !important;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+.card.bg-dark:last-child {
+    margin-bottom: 3.5rem !important;
+}
+.card.bg-dark:hover {
+    box-shadow: 0 8px 32px rgba(74,144,226,0.18);
+    transform: translateY(-6px) scale(1.025);
+}
+
+.voting-cards-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem 2.5rem;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+.candidate-card {
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(74,144,226,0.10);
+    transition: box-shadow 0.3s, transform 0.3s;
+    margin-bottom: 0.5rem;
+    background: #fff;
+    color: var(--secondary-color);
+    min-width: 220px;
+    max-width: 320px;
+    flex: 1 1 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.candidate-card:hover {
+    box-shadow: 0 8px 32px rgba(74,144,226,0.18);
+    transform: translateY(-6px) scale(1.025);
+}
+
+/* --- Responsive Tweaks --- */
+@media (max-width: 900px) {
+    .result-hero-box, .card.bg-dark {
+        max-width: 98vw;
+        width: 98vw;
+    }
+    .voting-cards-row {
+        gap: 1.5rem 1.5rem;
+    }
+    .candidate-card {
+        flex: 0 1 calc(100% - 1.5rem);
+        max-width: 98vw;
+        min-width: 180px;
+    }
+}
+@media (max-width: 600px) {
+    .result-hero-box {
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+        font-size: 1.1rem;
+    }
+    .result-hero-title {
+        font-size: 1.3rem;
+    }
+    .result-hero-icon {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+    }
+    .card.bg-dark {
+        padding: 0.5rem 0.2rem;
+    }
+}
+
+/* --- Subtle Hover for Buttons --- */
+.btn, .btn-connect-wallet {
+    transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover, .btn-connect-wallet:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 16px rgba(74,144,226,0.18);
+    filter: brightness(1.1);
+}
+
+.bg-light-yellow {
+    background: #FFFBEA !important;
+}
+
+/* Modern candidate vote icon */
+.candidate-vote-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4A90E2 60%, #B2D7FF 100%);
+    box-shadow: 0 2px 8px rgba(74,144,226,0.10);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    margin-left: 0.2rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.candidate-vote-icon i {
+    color: #fff;
+    font-size: 1.2rem;
+}
+.candidate-card .candidate-vote-icon {
+    margin-left: 0.5rem;
+}
+.candidate-card .candidate-vote-count {
+    font-weight: 600;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    margin-left: 0.2rem;
+}
+.candidate-card .candidate-vote-label {
+    color: #888;
+    font-size: 0.95rem;
+    margin-left: 0.3rem;
+}
+
+.vote-highlight {
+    background: #fff3cd;
+    color: #111 !important;
+    border-radius: 8px;
+    padding: 0.2em 0.7em;
+    box-shadow: 0 0 8px 2px #ffe066;
+    transition: background 0.7s, color 0.7s, box-shadow 0.7s;
 } 

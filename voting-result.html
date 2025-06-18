@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoteLedger | Voting Result</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>
+                <a href="https://chain-ballot-alpha.vercel.app/" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-link"></i>
+                VoteLedger
+                </a>
+            </h1>
+            <div class="wallet-dropdown">
+                <button id="connect-wallet" class="btn-header">
+                    <i class="fas fa-wallet"></i>
+                    <span>Connect Wallet</span>
+                </button>
+                <div class="wallet-dropdown-content">
+                    <button id="profile-btn">
+                        <i class="fas fa-user-circle"></i>
+                        <span>Profile</span>
+                    </button>
+                    <button id="disconnect-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Disconnect</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div id="result-header" class="welcome-section" style="margin-bottom:2rem;">
+                <h2>Voting Result</h2>
+                <p id="creator-name">Loading creator info...</p>
+            </div>
+            <div id="candidates-section" class="ongoing-votings-section" style="margin-bottom:2rem;">
+                <h2>Candidates & Votes</h2>
+                <div id="candidates-list" class="votings-grid"></div>
+            </div>
+            <div id="winner-section" class="welcome-section" style="margin-bottom:2rem; display:none;">
+                <h2>Winner</h2>
+                <div id="winner-animation"></div>
+                <p id="winner-name"></p>
+            </div>
+            <div id="voting-details-section" class="ongoing-votings-section" style="margin-bottom:2rem;">
+                <h2>Voting Details</h2>
+                <div id="voting-details"></div>
+            </div>
+           
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content container">
+            <div class="footer-section">
+                <h3>Voteledger</h3>
+                <p>Make your vote count. Voteledger revolutionizes democracy with blockchain-powered, user-friendly voting solutions.</p>
+            </div>
+            <div class="footer-section">
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase text-warning mb-4">Contact</h5>
+                    <p class="text-light"><i class="bi bi-envelope me-2"></i> ak9754886@gmail.com</p>
+                    <p class="text-light"><i class="bi bi-telephone me-2"></i> +91 9873134920</p>
+                    <p class="text-light"><i class="bi bi-geo-alt me-2"></i> Delhi, India</p>
+                  </div>
+              </div>
+              <hr class="text-white my-4">
+              <!-- Social & Copyright -->
+              <div class="row align-items-center ">
+                <div class="col-md-7 col-lg-8">
+                  <p class="text-muted mb-0">© 2025 VoteLedger. All rights reserved.</p>
+                </div>
+                <div class="col-md-5 col-lg-4 text-md-end">
+                  <a href="#" class="text-muted me-3"><i class="https://x.com/Anupam_3792"></i></a>
+                  <a href="#" class="text-muted me-3"><i class="https://github.com/Anupam3792"></i></a>
+                  <a href="#" class="text-muted me-3"><i class="bi bi-instagram fs-5"></i></a>
+                  <a href="#" class="text-muted"><i class="https://www.linkedin.com/in/anupam-kumar-4b6b94261?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"></i></a>
+                </div>
+              </div>
+            </div>
+          </footer>
+            <div class="footer-section">
+       
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.9.0/dist/web3.min.js"></script>
+    <script src="result.js"></script>
+</body>
+</html>
